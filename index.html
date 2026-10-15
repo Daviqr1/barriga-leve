@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barriga Leve 14 Dias — teste rápido</title>
+<meta name="description" content="Responda 5 perguntas rápidas e veja quais hábitos do seu dia podem estar por trás do inchaço.">
+<style>
+:root{--bg:#fbf6f1;--ink:#2b2420;--mut:#6d625a;--acc:#2f7d5b;--acc2:#256448;--card:#fff;--line:#eadfd5}
+*{box-sizing:border-box;margin:0}
+body{font:17px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);-webkit-text-size-adjust:100%}
+main{max-width:520px;margin:0 auto;padding:20px 18px 8px}
+h1{font-size:26px;line-height:1.2;margin:8px 0 14px}
+h2{font-size:22px;line-height:1.25;margin:0 0 12px}
+p{margin:0 0 12px}
+.mut{color:var(--mut);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+.btn{display:block;width:100%;border:0;border-radius:14px;background:var(--acc);color:#fff;font:700 18px/1.2 inherit;font-family:inherit;padding:18px 14px;margin:10px 0;cursor:pointer;text-align:center}
+.btn:active{background:var(--acc2)}
+.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .25s}
+.step{display:none}.step.on{display:block}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ul{padding-left:20px;margin:0 0 12px}li{margin-bottom:6px}
+.price{font-size:34px;font-weight:800;color:var(--acc2)}
+.res li{list-style:none;margin-left:-20px;padding:10px 12px;background:#f3ece4;border-radius:10px}
+footer{max-width:520px;margin:0 auto;padding:18px 18px 40px;font-size:13px;color:var(--mut)}
+footer a{color:var(--mut)}
+</style>
+</head>
+<body>
+<main>
+<section id="s0" class="step on">
+<h1>Se sua barriga amanhece reta e à noite parece de grávida…</h1>
+<p>…muitas vezes não é gordura. Gordura não some de madrugada. O que vai e volta no mesmo dia costuma ter a ver com ar, líquido e com a rotina.</p>
+<p class="mut">Responda 5 perguntas rápidas (30 segundos) e veja quais hábitos do seu dia podem estar entrando nessa conta.</p>
+<button class="btn" id="start">Começar o teste</button>
+</section>
+
+<section id="q" class="step">
+<div class="mut" id="cnt">Pergunta 1 de 5</div>
+<div class="bar"><i id="fill"></i></div>
+<div class="card"><h2 id="qt"></h2>
+<div class="row"><button class="btn" data-a="1">Sim</button><button class="btn alt" data-a="0">Não</button></div></div>
+</section>
+
+<section id="r" class="step">
+<h1>Seu inchaço tem cara de rotina</h1>
+<p>Pelo que você marcou, estes hábitos podem estar pesando no seu dia:</p>
+<ul class="res" id="rl"></ul>
+<p class="mut">Isto é um teste educativo sobre hábitos, não é diagnóstico. Se o inchaço for frequente ou vier com dor, procure um médico.</p>
+<div class="card">
+<h2>Guia Barriga Leve — 14 dias</h2>
+<p>Uma mudança de rotina por dia, em 4 fases:</p>
+<ul>
+<li><b>Desacelerar</b> — comer sem engolir ar</li>
+<li><b>Hidratar</b> — o que beber e quando</li>
+<li><b>Fibra em degraus</b> — aumentar aos poucos</li>
+<li><b>Dormir</b> — a noite que ajuda o dia</li>
+</ul>
+<p>Inclui checklist diário e diário de acompanhamento para você ver o que muda na sua rotina.</p>
+<p class="price">R$ 37 <span class="mut" style="font-size:15px;font-weight:400">pagamento único</span></p>
+<p><b>Garantia de 7 dias:</b> se não gostar, você pede o reembolso dentro do prazo de arrependimento previsto em lei.</p>
+<button class="btn" id="buy">Quero o guia de 14 dias</button>
+<p class="mut" style="text-align:center">Pagamento seguro pela Kiwify.</p>
+</div>
+</section>
+</main>
+<footer>
+<p>Conteúdo educativo. Não substitui consulta com médico ou nutricionista.</p>
+<p>Este site não é afiliado ao Facebook nem ao Instagram.</p>
+<p><a href="privacidade.html">Política de Privacidade</a> · <a href="termos.html">Termos</a></p>
+</footer>
+<script>
+var CHECKOUT_URL = "https://pay.kiwify.com.br/PENDENTE";
+var PIXEL_ID = "";
+if (PIXEL_ID) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init',PIXEL_ID);
+}
+function track(ev){try{if(PIXEL_ID&&window.fbq)fbq('track',ev)}catch(e){console.warn('pixel',e)}}
+track('PageView');
+var Q=["Sua barriga muda do dia para a noite?","Você almoça em menos de 15 minutos?","Você toma bebida gaseificada (refrigerante ou água com gás)?","Você masca chiclete?","Você dorme menos de 6 horas por noite?"];
+var T=[null,
+"Almoçar com pressa: quando se come rápido, engole-se mais ar junto com a comida, e isso costuma estufar a barriga.",
+"Bebidas gaseificadas: o gás da bebida vai direto para o estômago e pode aumentar a sensação de barriga cheia.",
+"Chiclete: mascar faz engolir ar sem perceber ao longo do dia.",
+"Pouco sono: noites curtas costumam bagunçar a rotina de fome e de alimentação do dia seguinte."];
+var i=0,A=[];
+function $(id){return document.getElementById(id)}
+function show(id){var s=document.querySelectorAll('.step');for(var k=0;k<s.length;k++)s[k].className='step';$(id).className='step on';window.scrollTo(0,0)}
+function ask(){$('qt').textContent=Q[i];$('cnt').textContent='Pergunta '+(i+1)+' de 5';$('fill').style.width=(i/5*100)+'%'}
+function result(){
+var h=[],k;for(k=1;k<5;k++)if(A[k])h.push(T[k]);
+if(!h.length)h.push('Você não marcou os hábitos mais comuns, mas o guia também cobre fases como fibra em degraus e hidratação.');
+if(A[0]&&h.length<4)h.unshift('Sua barriga muda ao longo do dia: esse vai e volta costuma ter a ver com ar e líquido, não com gordura.');
+h=h.slice(0,4);
+$('rl').innerHTML='';for(k=0;k<h.length;k++){var li=document.createElement('li');li.textContent=h[k];$('rl').appendChild(li)}
+show('r');track('ViewContent');
+}
+$('start').onclick=function(){i=0;A=[];ask();show('q')};
+var b=document.querySelectorAll('[data-a]');
+for(var j=0;j<b.length;j++)b[j].onclick=function(){A[i]=+this.getAttribute('data-a');i++;if(i<5)ask();else{$('fill').style.width='100%';result()}};
+$('buy').onclick=function(){
+track('InitiateCheckout');
+var u=CHECKOUT_URL,q=location.search.replace(/^\?/,'');
+if(q)u+=(u.indexOf('?')>-1?'&':'?')+q;
+location.href=u;
+};
+</script>
+</body>
+</html>
